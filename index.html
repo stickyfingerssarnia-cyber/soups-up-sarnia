@@ -5,7 +5,17 @@
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
 }
-</style></head><body><div class="page-wrapper"><div class="global-styles"><div class="style-overrides w-embed"><style>
+</style><script>
+document.addEventListener('DOMContentLoaded', function () {
+  const hoursHeading = Array.from(document.querySelectorAll('h2')).find(function (heading) {
+    return heading.textContent.includes('Summer, Fall, & Winter Hours');
+  });
+  const hours = hoursHeading && hoursHeading.closest('.max-width-large')?.querySelector('.text-size-medium strong');
+  if (hours) {
+    hours.innerHTML = 'Monday – Friday &nbsp;|&nbsp; 10:00am – 6:00pm<br>Saturday &nbsp;|&nbsp; 10:00am – 3:00pm<br>Sunday &nbsp;|&nbsp; Closed';
+  }
+});
+</script></head><body><div class="page-wrapper"><div class="global-styles"><div class="style-overrides w-embed"><style>
 
 /* Ensure all elements inherit the color from its parent */
 a,
