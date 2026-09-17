@@ -4,6 +4,60 @@ html {
   font-family: sans-serif;
 }
 
+/* Cross-site link between Soup's Up and ME Thyme. */
+.site-switcher {
+  color: var(--color-scheme-1--text);
+  text-align: center;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+  min-width: 7.5rem;
+  display: flex;
+}
+
+.site-switcher_label {
+  letter-spacing: .02em;
+  font-size: .68rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.site-switcher_logo {
+  object-fit: contain;
+  width: 82px;
+  height: 48px;
+}
+
+.site-switcher:hover .site-switcher_label,
+.site-switcher:focus-visible .site-switcher_label {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 991px) {
+  .site-switcher {
+    min-width: 6.25rem;
+  }
+
+  .site-switcher_logo {
+    width: 68px;
+    height: 42px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .site-switcher_label {
+    max-width: 6rem;
+    font-size: .58rem;
+  }
+
+  .site-switcher_logo {
+    width: 58px;
+    height: 36px;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -10513,5 +10567,11 @@ figcaption {
 @media screen and (max-width: 479px) {
   #w-node-_9325f618-6000-0345-5fd1-6ace5c897d61-4a29fceb, #w-node-_3268ee83-6200-85ef-31ab-a5e0cc5f0922-f7160f12 {
     grid-area: span 1 / span 1 / span 1 / span 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar3_container {
+    grid-template-columns: max-content minmax(0, 1fr) max-content max-content;
   }
 }
