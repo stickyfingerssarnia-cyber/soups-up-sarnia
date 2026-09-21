@@ -10575,3 +10575,42 @@ figcaption {
     grid-template-columns: max-content minmax(0, 1fr) max-content max-content;
   }
 }
+
+/* Keep the mobile header to one balanced row. */
+@media screen and (max-width: 479px) {
+  .navbar3_container {
+    grid-column-gap: 8px;
+    grid-template-columns: 48px minmax(0, 1fr) 82px;
+    min-height: 72px;
+    position: relative;
+  }
+
+  .navbar3_container > .button.large-button {
+    display: none;
+  }
+
+  .navbar3_logo-link {
+    grid-column: 2;
+    justify-self: center;
+    width: 110px;
+  }
+
+  .site-switcher {
+    width: 82px;
+    min-width: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .site-switcher_label {
+    max-width: 82px;
+    font-size: .54rem;
+  }
+
+  .site-switcher_logo {
+    width: 54px;
+    height: 32px;
+  }
+}
